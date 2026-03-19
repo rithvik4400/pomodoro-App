@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Timer - Pomodoro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <div class="glass-container">
+        <header>
+            <div class="header-image-container">
+                <img src="https://images.unsplash.com/photo-1495364141860-b0d03eaecc28?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    alt="Minimalist Sand Timer" class="header-image">
+            </div>
+            <h1>Zen Timer</h1>
+            <p class="subtitle">Stay focused, stay calm.</p>
+        </header>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="pomodoro">Pomodoro</button>
+            <button class="mode-btn" data-mode="short-break">Short Break</button>
+            <button class="mode-btn" data-mode="long-break">Long Break</button>
+        </div>
+
+        <div class="timer-display">
+            <svg class="progress-ring" width="280" height="280">
+                <circle class="progress-ring__circle" stroke="rgba(255,255,255,0.15)" stroke-width="8"
+                    fill="transparent" r="130" cx="140" cy="140" />
+                <circle class="progress-ring__progress" stroke="white" stroke-width="8" fill="transparent" r="130"
+                    cx="140" cy="140" />
+            </svg>
+            <div class="time" id="time-display">25:00</div>
+        </div>
+
+        <div class="controls">
+            <button id="start-btn" class="control-btn primary">Start</button>
+            <button id="reset-btn" class="control-btn secondary">Reset</button>
+        </div>
+    </div>
+
+    <!-- Audio element for notification -->
+    <audio id="notification-sound" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
